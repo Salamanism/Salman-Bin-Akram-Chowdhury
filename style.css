@@ -1,0 +1,139 @@
+/* Color Variables */
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --accent-color: #38bdf8;
+    --card-bg: #1e293b;
+    --transition: all 0.3s ease;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                url('https://images.unsplash.com/photo-1517139274439-b9d997b5a974?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 { 
+    font-size: 3.5rem; 
+    letter-spacing: -1px;
+    margin-bottom: 10px; 
+}
+
+.subtitle { 
+    font-size: 1.2rem; 
+    color: var(--accent-color); 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px; 
+}
+
+/* Layout Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+section { margin-bottom: 100px; }
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+h2::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: var(--card-bg);
+    margin-left: 20px;
+}
+
+/* Experience Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+/* Skills Tags */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Social Links */
+.contact-links {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-links a {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    transition: var(--transition);
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid var(--card-bg);
+}
